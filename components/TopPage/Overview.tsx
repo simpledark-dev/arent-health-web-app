@@ -15,7 +15,7 @@ const Overview = () => {
             />
           </div>
         </div>
-        <div className="bg-gray-200 w-[58%] border">Graph</div>
+        <div className="bg-[#2E2E2E] w-[58%]"></div>
       </div>
     </section>
   );
