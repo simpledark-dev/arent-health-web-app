@@ -1,11 +1,7 @@
 import Navbar from "@/components/Navbar";
 
 const ColumnPage = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <></>;
 };
 
 export default ColumnPage;

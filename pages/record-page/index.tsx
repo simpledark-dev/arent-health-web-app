@@ -1,11 +1,5 @@
-import Navbar from "@/components/Navbar";
-
 const RecordPage = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <></>;
 };
 
 export default RecordPage;
