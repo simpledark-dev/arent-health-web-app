@@ -27,7 +27,7 @@ export const mealList = [
   {
     id: 1,
     time: {
-      date: 21,
+      date: 11,
       month: 5,
     },
     type: MealType.LUNCH,
@@ -36,7 +36,7 @@ export const mealList = [
   {
     id: 2,
     time: {
-      date: 21,
+      date: 12,
       month: 5,
     },
     type: MealType.MORNING,
@@ -45,7 +45,7 @@ export const mealList = [
   {
     id: 3,
     time: {
-      date: 21,
+      date: 11,
       month: 5,
     },
     type: MealType.DINNER,
@@ -63,7 +63,7 @@ export const mealList = [
   {
     id: 5,
     time: {
-      date: 21,
+      date: 14,
       month: 5,
     },
     type: MealType.LUNCH,
@@ -72,7 +72,7 @@ export const mealList = [
   {
     id: 6,
     time: {
-      date: 21,
+      date: 17,
       month: 5,
     },
     type: MealType.MORNING,
@@ -90,7 +90,7 @@ export const mealList = [
   {
     id: 8,
     time: {
-      date: 21,
+      date: 2,
       month: 5,
     },
     type: MealType.MORNING,
@@ -99,7 +99,7 @@ export const mealList = [
   {
     id: 9,
     time: {
-      date: 21,
+      date: 4,
       month: 5,
     },
     type: MealType.MORNING,
@@ -108,7 +108,7 @@ export const mealList = [
   {
     id: 10,
     time: {
-      date: 21,
+      date: 5,
       month: 5,
     },
     type: MealType.MORNING,
@@ -122,5 +122,50 @@ export const mealList = [
     },
     type: MealType.MORNING,
     image: mealImg1,
+  },
+  {
+    id: 12,
+    time: {
+      date: 21,
+      month: 5,
+    },
+    type: MealType.SNACK,
+    image: mealImg2,
+  },
+  {
+    id: 13,
+    time: {
+      date: 21,
+      month: 5,
+    },
+    type: MealType.SNACK,
+    image: mealImg1,
+  },
+  {
+    id: 14,
+    time: {
+      date: 21,
+      month: 5,
+    },
+    type: MealType.DINNER,
+    image: mealImg2,
+  },
+  {
+    id: 15,
+    time: {
+      date: 21,
+      month: 5,
+    },
+    type: MealType.DINNER,
+    image: mealImg1,
+  },
+  {
+    id: 15,
+    time: {
+      date: 21,
+      month: 5,
+    },
+    type: MealType.SNACK,
+    image: mealImg6,
   },
 ];

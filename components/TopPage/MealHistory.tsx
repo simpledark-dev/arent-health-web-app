@@ -15,25 +15,25 @@ const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   return (
     <div className="flex justify-center gap-16">
       <Image
-        className="hover:translate-x-1 hover:-translate-y-1"
+        className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
         src={morningHex}
         alt="morning-hex"
         onClick={() => setFilter("Morning")}
       />
       <Image
-        className="hover:translate-x-1 hover:-translate-y-1"
+        className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
         src={lunchHex}
         alt="lunch-hex"
         onClick={() => setFilter("Lunch")}
       />
       <Image
-        className="hover:translate-x-1 hover:-translate-y-1"
+        className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
         src={dinnerHex}
         alt="dinner-hex"
         onClick={() => setFilter("Dinner")}
       />
       <Image
-        className="hover:translate-x-1 hover:-translate-y-1"
+        className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
         src={snackHex}
         alt="snack-hex"
         onClick={() => setFilter("Snack")}
@@ -98,7 +98,7 @@ const MealHistory = () => {
       <FilterButtons setFilter={setFilter} />
       {loading ? (
         <div className="w-max mx-auto py-32">
-          <ClipLoader />
+          <ClipLoader size={60} />
         </div>
       ) : (
         <MealList mealList={filteredMealList} />
