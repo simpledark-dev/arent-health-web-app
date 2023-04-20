@@ -1,4 +1,9 @@
-import { MealType } from "@/api/mockData/mealHistoryData";
+export enum MealType {
+  MORNING = "Morning",
+  LUNCH = "Lunch",
+  DINNER = "Dinner",
+  SNACK = "Snack",
+}
 
 export interface Meal {
   id: number;

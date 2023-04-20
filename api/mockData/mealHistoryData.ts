@@ -1,11 +1,5 @@
 import { MealImages } from "@/public/images";
-
-export enum MealType {
-  MORNING = "Morning",
-  LUNCH = "Lunch",
-  DINNER = "Dinner",
-  SNACK = "Snack",
-}
+import { MealType } from "@/types";
 
 export const mealList = [
   {
