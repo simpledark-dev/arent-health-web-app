@@ -17,3 +17,12 @@ export interface Diary {
   contentIntro: string;
   content: string;
 }
+
+export interface Article {
+  id: number;
+  date: string;
+  time: string;
+  image: any;
+  title: string;
+  hashtags: string[];
+}

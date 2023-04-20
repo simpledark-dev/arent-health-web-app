@@ -1,4 +1,5 @@
 import { mealList } from "./mealHistoryData";
 import { diaryList } from "./diaryData";
+import { articleList } from "./articleData";
 
-export { mealList, diaryList };
+export { mealList, diaryList, articleList };

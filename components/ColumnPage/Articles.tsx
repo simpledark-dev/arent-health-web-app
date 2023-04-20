@@ -1,17 +1,70 @@
 import Image from "next/image";
-import column1 from "@/public/images/column-1.jpg";
+import SeeMoreButton from "../SeeMoreButton";
+import usefetchArticles from "@/hooks/usefetchArticles";
+import LoadingSpinner from "../LoadingSpinner";
+
+interface ArticleProps {
+  date: string;
+  time: string;
+  title: string;
+  image: any;
+  hashtags: string[];
+}
+
+const Article = ({ date, time, title, image, hashtags }: ArticleProps) => {
+  return (
+    <div className="w-56">
+      {/* Image container */}
+      <div className="relative h-36">
+        <Image className="h-full object-cover" src={image} alt="article-img" />
+        <div
+          className="absolute bottom-0 left-0 w-[60%] h-6 px-2 bg-[#FFCC21] 
+            flex justify-between items-center
+            text-white font-light text-[0.9rem]"
+        >
+          <span>{date}</span> <span>{time}</span>
+        </div>
+      </div>
+
+      {/* Texts */}
+      <div className="font-light space-y-2 my-2">
+        <p className="text-sm">{title}</p>
+        <p className="text-xs text-[#FF963C] space-x-2">
+          {hashtags.map((hashtag) => (
+            <span key={hashtag}>{hashtag}</span>
+          ))}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const Articles = () => {
+  const { articleList, loading } = usefetchArticles();
+
   return (
-    <div className="flex justify-between my-16">
-      <div className="w-56 h-36 bg-black">
-        <Image className="object-cover" src={column1} alt="col-img" />
-        <p>魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…</p>
-        <p>#魚料理 #和食 #DHA</p>
+    <div className="my-16">
+      <div className="flex flex-wrap justify-between ">
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          articleList?.map((article) => {
+            return (
+              <Article
+                key={article.id}
+                image={article.image}
+                title={article.title}
+                date={article.date}
+                time={article.time}
+                hashtags={article.hashtags}
+              />
+            );
+          })
+        )}
       </div>
-      <div className="w-56 h-36 bg-black"></div>
-      <div className="w-56 h-36 bg-black"></div>
-      <div className="w-56 h-36 bg-black"></div>
+      {articleList && articleList?.length >= 8 && (
+        <SeeMoreButton text="コラムをもっと見る" />
+      )}
     </div>
   );
 };

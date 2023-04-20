@@ -1,7 +1,7 @@
 // Mock Data
-import { mealList, diaryList } from "./mockData";
+import { mealList, diaryList, articleList } from "./mockData";
 
-import { Meal, Diary } from "@/types";
+import { Meal, Diary, Article } from "@/types";
 
 const FAKE_DELAY_IN_MS = 1000;
 const FAKE_SLOW_DELAY_IN_MS = 3000;
@@ -22,9 +22,18 @@ const fetchDiary = (): Promise<Diary[] | null> => {
   });
 };
 
+const fetchArticles = (): Promise<Article[] | null> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(articleList);
+    }, FAKE_DELAY_IN_MS);
+  });
+};
+
 const MockAPI = {
   fetchMealHistory,
   fetchDiary,
+  fetchArticles,
 };
 
 export default MockAPI;
