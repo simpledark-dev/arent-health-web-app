@@ -1,6 +1,6 @@
 import { MealType } from "@/api/mockData/mealHistoryData";
 
-export type Meal = {
+export interface Meal {
   id: number;
   time: {
     date: number;
@@ -8,4 +8,12 @@ export type Meal = {
   };
   type: MealType;
   image: any;
-};
+}
+
+export interface Diary {
+  id: number;
+  date: string;
+  time: string;
+  contentIntro: string;
+  content: string;
+}

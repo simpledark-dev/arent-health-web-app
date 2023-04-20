@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/image";
-import ClipLoader from "react-spinners/ClipLoader";
 import morningHex from "@/public/assets/morning_component_hex.svg";
 import lunchHex from "@/public/assets/lunch_component_hex.svg";
 import dinnerHex from "@/public/assets/dinner_component_hex.svg";
@@ -11,6 +10,7 @@ import useFetchMealHistory from "@/hooks/useFetchMealHistory";
 import { formateDateMonth } from "@/utils/dateTime";
 import { Meal } from "@/types";
 import SeeMoreButton from "../SeeMoreButton";
+import LoadingSpinner from "../LoadingSpinner";
 
 const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   return (
@@ -68,11 +68,10 @@ const MealList = ({ mealList }: { mealList: Meal[] | null }) => {
               </div>
             );
           })}
+        {mealList && mealList.length >= 8 && (
+          <SeeMoreButton text={"記録をもっと見る"} />
+        )}
       </div>
-
-      {mealList && mealList.length >= 8 && (
-        <SeeMoreButton text={"記録をもっと見る"} />
-      )}
     </section>
   );
 };
@@ -88,13 +87,7 @@ const MealHistory = () => {
   return (
     <section className="max-w-screen-lg mx-auto mt-8 mb-16 space-y-6">
       <FilterButtons setFilter={setFilter} />
-      {loading ? (
-        <div className="w-max mx-auto py-32">
-          <ClipLoader size={60} />
-        </div>
-      ) : (
-        <MealList mealList={filteredMealList} />
-      )}
+      {loading ? <LoadingSpinner /> : <MealList mealList={filteredMealList} />}
     </section>
   );
 };
