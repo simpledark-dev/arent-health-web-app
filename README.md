@@ -71,47 +71,39 @@ Figma design: [Design](https://www.figma.com/file/7qqT3dvv5OagaRlUFK01vB/HealthA
 ## Project Structure
 
 ```
-figures                  ---> images/screenshots for Readme.md
-src
-├── api
-    ├── mockData         ---> mock data
-│   └── MockAPI.ts       ---> mock API fetch mock data
-├── public               ---> contains images, icons, etc.
-│   ├── icons
-│   └── images
-├── hooks                ---> reusable custom hooks (e.g API fetch)
-├── layouts              ---> layout components defining structure of a page
-├── components
-│   ├── PageAComponent   ---> Components used in a page
-│   │   ├── ComponentA.tsx
-│   │   ├── ComponentB.tsx
-|   |   └── ComponentC.tsx
-│   ├── PageAComponent
-│   |   ├── ComponentA.tsx
-│   |   ├── ComponentB.tsx
-|   |   └── ComponentC.tsx
-|   └── shared           ---> Components shared across all pages
+figures              ---> images/screenshots for Readme.md
+api
+├── mockData         ---> mock data
+└── MockAPI.ts       ---> mock API fetch mock data
+public               ---> contains images, icons, etc.
+├── icons
+└── images
+hooks                ---> reusable custom hooks (e.g API fetch)
+layouts              ---> layout components defining structure of a page
+components
+   PageAComponent    ---> Components used in a page
+   ├── ComponentA.tsx
+   │   ├── ComponentB.tsx
+   |   └── ComponentC.tsx
+   ├── PageAComponent
+   |   ├── ComponentA.tsx
+   |   ├── ComponentB.tsx
+   |   └── ComponentC.tsx
+   └── shared        ---> Components shared across all pages
+   ...
+pages
+├── pageA            ---> a page of the application (correspond to a route)
+|   └── index.tsx
+├── pageB
+|   └── index.tsx
 │   ...
-├──pages
-│   ├── pageA            ---> a page of the application (correspond to a route)
-|   |   └── index.tsx
-│   ├── pageB
-|       └── index.tsx
-│   ...
-└── utils
-    ├── moduleA          ---> util module for important calculation
-    │   └──tests         ---> all unit tests for each module
-    │       ├── fn1.test.ts
-    │       ├── fn2.test.ts
-    │       ...
-    │   └── index.tsx
-    ├── moduleB
-    │   ├── tests
-            ├── fn1.test.ts
-    │       ├── fn2.test.ts
-            ...
-    │   └── index.tsx
-    ...
+utils
+├── moduleA          ---> util module for important calculation
+    └──tests         ---> unit tests for each module
+        ├── fn1.test.ts
+        ├── fn2.test.ts
+         ...
+        └── index.tsx
 README.md
 ```
 
