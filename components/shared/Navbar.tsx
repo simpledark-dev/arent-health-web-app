@@ -3,14 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "@/public/icons";
 import DrawnMenu from "./DrawnMenu";
+import Container from "@/layouts/Container";
 
 const Navbar = () => {
   const [drawnMenuOpen, setDrawnMenuOpen] = useState(false);
 
   return (
-    <section className="bg-[#414141] w-full">
-      <div className="max-w-screen-lg mx-auto px-8 text-base text-white font-light">
-        <nav className="flex justify-between h-16 items-center">
+    <section className="bg-[#414141]">
+      <Container>
+        <nav className="flex justify-between h-16 items-center text-base text-white font-light">
           {/* Logo */}
           <div className="mt-2">
             <Link href="/">
@@ -22,7 +23,7 @@ const Navbar = () => {
           <ul className="flex gap-12">
             {/* My Record */}
             <Link href="/record-page">
-              <li className="flex gap-2 items-center">
+              <li className="hidden md:flex gap-2 items-center">
                 <Image height={32} src={Icons.iconMemo} alt="icon-memo" />
                 <span>自分の記録</span>
               </li>
@@ -35,7 +36,7 @@ const Navbar = () => {
                 src={Icons.iconChallenge}
                 alt="icon-challenge"
               />
-              <span>チャレンジ</span>
+              <span className="hidden sm:block">チャレンジ</span>
             </li>
 
             {/* Notification */}
@@ -46,7 +47,7 @@ const Navbar = () => {
                   1
                 </div>
               </div>
-              <span>お知らせ</span>
+              <span className="hidden sm:block">お知らせ</span>
             </li>
 
             {/* Drawn Menu */}
@@ -66,7 +67,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </Container>
     </section>
   );
 };

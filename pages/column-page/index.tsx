@@ -1,12 +1,13 @@
 import Articles from "@/components/ColumnPage/Articles";
 import RecommendSelections from "@/components/ColumnPage/RecommendSelections";
+import Container from "@/layouts/Container";
 
 const ColumnPage = () => {
   return (
-    <section className="max-w-screen-lg mx-auto">
+    <Container>
       <RecommendSelections />
       <Articles />
-    </section>
+    </Container>
   );
 };
 

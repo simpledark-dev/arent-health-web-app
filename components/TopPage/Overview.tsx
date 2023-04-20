@@ -20,8 +20,8 @@ const CircularProgress = ({ progress }: { progress: number }) => {
 const Overview = () => {
   return (
     <section>
-      <div className="flex">
-        <div className="w-[42%] max-h-80 ">
+      <div className="flex flex-wrap">
+        <div className="sm:w-[42%] max-h-80 ">
           <div className="relative h-full bg-gradient-to-br from-yellow-300/10 to-yellow-500/30 saturate-150 brightness-100">
             <Image
               className=" z-10 h-full object-cover mix-blend-soft-light"
@@ -31,7 +31,7 @@ const Overview = () => {
             <CircularProgress progress={75} />
           </div>
         </div>
-        <div className="bg-[#2E2E2E] w-[58%]"></div>
+        <div className="bg-[#2E2E2E] w-full h-80 sm:w-[58%]"></div>
       </div>
     </section>
   );

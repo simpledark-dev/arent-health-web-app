@@ -11,7 +11,7 @@ interface DiaryCardProps {
 
 const DiaryCard = ({ date, time, contentIntro, content }: DiaryCardProps) => {
   return (
-    <div className="w-56 aspect-square border border-[#707070] p-4">
+    <div className="w-[80%] sm:w-[calc(40%)] md:w-[calc(25%-0.6rem)] sm:aspect-square border border-[#707070] p-4">
       <h4 className="text-lg font-light">{date}</h4>
       <h4 className="text-lg font-light">{time}</h4>
       <div className="text-xs font-light mt-2">
@@ -26,8 +26,8 @@ const Diary = () => {
   const { diaryList, loading } = useFetchDiary();
   return (
     <div className="my-16 space-y-4">
-      <h3 className="text-xl font-light"> MY DIARY</h3>
-      <div className="flex flex-wrap justify-between gap-3">
+      <h3 className="text-xl font-light text-center md:text-left"> MY DIARY</h3>
+      <div className="flex flex-wrap justify-center md:justify-between gap-3">
         {loading ? (
           <LoadingSpinner />
         ) : (

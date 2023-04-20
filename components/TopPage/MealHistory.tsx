@@ -8,10 +8,11 @@ import LoadingSpinner from "@/components/shared/LoadingSpinner";
 import SeeMoreButton from "@/components/shared/SeeMoreButton";
 
 import { formateDateMonth } from "@/utils/dateTime";
+import Container from "@/layouts/Container";
 
 const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   return (
-    <div className="flex justify-center gap-16">
+    <div className="flex flex-wrap justify-center gap-16">
       <Image
         className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
         src={Icons.morningHex}
@@ -49,7 +50,7 @@ interface MealCardProps {
 
 const MealCard = ({ image, date, month, type }: MealCardProps) => {
   return (
-    <div className="relative ">
+    <div className="relative  md:w-[calc(25%-0.5rem)]">
       <Image
         className="w-[14.625rem] aspect-square object-cover"
         src={image}
@@ -74,31 +75,33 @@ const MealHistory = () => {
     : [];
 
   return (
-    <section className="max-w-screen-lg mx-auto mt-8 mb-16 space-y-6">
-      <FilterButtons setFilter={setFilter} />
-      <div className="flex flex-wrap justify-center gap-2">
-        {loading ? (
-          <LoadingSpinner />
-        ) : (
-          filteredMealList?.map((meal) => {
-            if (!meal) return <></>;
+    <Container>
+      <div className="mt-8 mb-16 space-y-6">
+        <FilterButtons setFilter={setFilter} />
+        <div className="flex flex-wrap justify-center gap-2">
+          {loading ? (
+            <LoadingSpinner />
+          ) : (
+            filteredMealList?.map((meal) => {
+              if (!meal) return <></>;
 
-            return (
-              <MealCard
-                key={meal.id}
-                image={meal.image}
-                date={meal.time.date}
-                month={meal.time.month}
-                type={meal.type}
-              />
-            );
-          })
+              return (
+                <MealCard
+                  key={meal.id}
+                  image={meal.image}
+                  date={meal.time.date}
+                  month={meal.time.month}
+                  type={meal.type}
+                />
+              );
+            })
+          )}
+        </div>
+        {mealList && mealList.length >= 8 && (
+          <SeeMoreButton text={"記録をもっと見る"} />
         )}
       </div>
-      {mealList && mealList.length >= 8 && (
-        <SeeMoreButton text={"記録をもっと見る"} />
-      )}
-    </section>
+    </Container>
   );
 };
 

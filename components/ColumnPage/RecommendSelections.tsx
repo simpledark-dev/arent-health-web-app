@@ -7,7 +7,7 @@ interface RecommendationCard {
 
 const RecommendationCard = ({ texts }: RecommendationCard) => {
   return (
-    <div className="w-56 h-36 bg-[#2E2E2E] flex flex-col justify-center items-center">
+    <div className="w-[275px] sm:w-[calc(50%-2rem)] md:w-[calc(25%-2rem)] h-36 bg-[#2E2E2E] flex flex-col justify-center items-center">
       <div className="text-center space-y-2">
         <h3 className="text-[#FFCC21] text-[22px] font-light tracking-wider">
           {texts.en}
@@ -21,7 +21,7 @@ const RecommendationCard = ({ texts }: RecommendationCard) => {
 
 const RecommendSelections = () => {
   return (
-    <div className="flex justify-between mt-16">
+    <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-16">
       <RecommendationCard
         texts={{ en: "RECOMMENDED COLUMN", jp: "オススメ" }}
       />

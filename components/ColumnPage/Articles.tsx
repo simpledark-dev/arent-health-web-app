@@ -19,9 +19,9 @@ const ArticleCard = ({
   hashtags,
 }: ArticleCardProps) => {
   return (
-    <div className="w-56">
+    <div className="w-[30rem] sm:w-[calc(33.3%-0.5rem)] md:w-[calc(25%-0.5rem)]">
       {/* Image container */}
-      <div className="relative h-36">
+      <div className="relative h-72 sm:h-36">
         <Image className="h-full object-cover" src={image} alt="article-img" />
         <div
           className="absolute bottom-0 left-0 w-[60%] h-6 px-2 bg-[#FFCC21] 
@@ -50,7 +50,7 @@ const Articles = () => {
 
   return (
     <div className="my-16">
-      <div className="flex flex-wrap justify-between ">
+      <div className="flex flex-wrap justify-center md:justify-between gap-2">
         {loading ? (
           <LoadingSpinner />
         ) : (
