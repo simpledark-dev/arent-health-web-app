@@ -23,6 +23,19 @@ export interface Diary {
   content: string;
 }
 
+export interface Exercise {
+  id: number;
+  title: string;
+  energy: {
+    amount: number;
+    unit: string;
+  };
+  duration: {
+    amount: number;
+    unit: string;
+  };
+}
+
 export interface Article {
   id: number;
   date: string;
