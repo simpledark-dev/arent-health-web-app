@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="mt-2">
-            <Link href="/top-page">
+            <Link href="/">
               <Image height={40} src={Icons.healthLogo} alt="logo" />
             </Link>
           </div>
