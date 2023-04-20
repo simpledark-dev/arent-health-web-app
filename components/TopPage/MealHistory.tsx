@@ -8,7 +8,6 @@ import snackHex from "@/public/assets/snack_component_hex.svg";
 import useFetchMealHistory from "@/hooks/useFetchMealHistory";
 
 import { formateDateMonth } from "@/utils/dateTime";
-import { Meal } from "@/types";
 import SeeMoreButton from "../SeeMoreButton";
 import LoadingSpinner from "../LoadingSpinner";
 
@@ -43,36 +42,28 @@ const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   );
 };
 
-const MealList = ({ mealList }: { mealList: Meal[] | null }) => {
-  return (
-    <section>
-      <div className="flex flex-wrap justify-center gap-2">
-        {mealList &&
-          mealList.map((meal) => {
-            if (!meal) return <></>;
+interface MealCardProps {
+  image: any;
+  date: number;
+  month: number;
+  type: string;
+}
 
-            return (
-              <div key={meal.id} className="relative ">
-                <Image
-                  className="w-[14.625rem] aspect-square object-cover"
-                  src={meal.image}
-                  alt="meal"
-                />
-                <div
-                  className="absolute bottom-0 left-0 w-1/2 h-8 bg-[#FFCC21] flex justify-center items-center
-                text-white font-light text-[0.9rem]"
-                >
-                  {formateDateMonth(meal.time.date, meal.time.month)}.
-                  {meal.type}
-                </div>
-              </div>
-            );
-          })}
-        {mealList && mealList.length >= 8 && (
-          <SeeMoreButton text={"記録をもっと見る"} />
-        )}
+const MealCard = ({ image, date, month, type }: MealCardProps) => {
+  return (
+    <div className="relative ">
+      <Image
+        className="w-[14.625rem] aspect-square object-cover"
+        src={image}
+        alt="meal"
+      />
+      <div
+        className="absolute bottom-0 left-0 w-1/2 h-8 bg-[#FFCC21] flex justify-center items-center
+  text-white font-light text-[0.9rem]"
+      >
+        {formateDateMonth(date, month)}.{type}
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -87,7 +78,28 @@ const MealHistory = () => {
   return (
     <section className="max-w-screen-lg mx-auto mt-8 mb-16 space-y-6">
       <FilterButtons setFilter={setFilter} />
-      {loading ? <LoadingSpinner /> : <MealList mealList={filteredMealList} />}
+      <div className="flex flex-wrap justify-center gap-2">
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          filteredMealList?.map((meal) => {
+            if (!meal) return <></>;
+
+            return (
+              <MealCard
+                key={meal.id}
+                image={meal.image}
+                date={meal.time.date}
+                month={meal.time.month}
+                type={meal.type}
+              />
+            );
+          })
+        )}
+      </div>
+      {mealList && mealList.length >= 8 && (
+        <SeeMoreButton text={"記録をもっと見る"} />
+      )}
     </section>
   );
 };
