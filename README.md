@@ -81,22 +81,22 @@ public               ---> contains images, icons, etc.
 hooks                ---> reusable custom hooks (e.g API fetch)
 layouts              ---> layout components defining structure of a page
 components
-   PageAComponent    ---> Components used in a page
-   ├── ComponentA.tsx
-   │   ├── ComponentB.tsx
-   |   └── ComponentC.tsx
-   ├── PageAComponent
-   |   ├── ComponentA.tsx
-   |   ├── ComponentB.tsx
-   |   └── ComponentC.tsx
-   └── shared        ---> Components shared across all pages
+├── PageAComponent   ---> Components used in a page
+|   ├── ComponentA.tsx
+|   ├── ComponentB.tsx
+|   └── ComponentC.tsx
+├── PageBComponent
+|   ├── ComponentA.tsx
+|   ├── ComponentB.tsx
+|   └── ComponentC.tsx
+└── shared           ---> Components shared across all pages
    ...
 pages
 ├── pageA            ---> a page of the application (correspond to a route)
 |   └── index.tsx
 ├── pageB
-|   └── index.tsx
-│   ...
+    └── index.tsx
+   ...
 utils
 ├── moduleA          ---> util module for important calculation
     └──tests         ---> unit tests for each module
