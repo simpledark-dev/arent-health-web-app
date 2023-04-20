@@ -1,10 +1,10 @@
 import Articles from "@/components/ColumnPage/Articles";
-import RecommendedItems from "@/components/ColumnPage/RecommendedItems";
+import RecommendSelections from "@/components/ColumnPage/RecommendSelections";
 
 const ColumnPage = () => {
   return (
     <section className="max-w-screen-lg mx-auto">
-      <RecommendedItems />
+      <RecommendSelections />
       <Articles />
     </section>
   );

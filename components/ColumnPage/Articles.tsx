@@ -3,7 +3,7 @@ import SeeMoreButton from "../SeeMoreButton";
 import usefetchArticles from "@/hooks/usefetchArticles";
 import LoadingSpinner from "../LoadingSpinner";
 
-interface ArticleProps {
+interface ArticleCardProps {
   date: string;
   time: string;
   title: string;
@@ -11,7 +11,13 @@ interface ArticleProps {
   hashtags: string[];
 }
 
-const Article = ({ date, time, title, image, hashtags }: ArticleProps) => {
+const ArticleCard = ({
+  date,
+  time,
+  title,
+  image,
+  hashtags,
+}: ArticleCardProps) => {
   return (
     <div className="w-56">
       {/* Image container */}
@@ -50,7 +56,7 @@ const Articles = () => {
         ) : (
           articleList?.map((article) => {
             return (
-              <Article
+              <ArticleCard
                 key={article.id}
                 image={article.image}
                 title={article.title}
