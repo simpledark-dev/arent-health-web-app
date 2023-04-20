@@ -16,26 +16,41 @@ const Navbar = () => {
     <section className="bg-[#414141] w-full">
       <div className="max-w-screen-lg mx-auto px-8 text-base text-white font-light">
         <nav className="flex justify-between h-16 items-center">
+          {/* Logo */}
           <div className="mt-2">
             <Link href="/top-page">
               <Image height={40} src={healthLogo} alt="logo" />
             </Link>
           </div>
+
+          {/* Menu Items */}
           <ul className="flex gap-12">
+            {/* My Record */}
             <Link href="/record-page">
-              <li className="flex gap-1 items-center">
+              <li className="flex gap-2 items-center">
                 <Image height={32} src={iconMemo} alt="icon-memo" />
                 <span>自分の記録</span>
               </li>
             </Link>
-            <li className="flex gap-1 items-center">
+
+            {/* Challenge */}
+            <li className="flex gap-2 items-center">
               <Image height={32} src={iconChallenge} alt="icon-challenge" />
               <span>チャレンジ</span>
             </li>
-            <li className="flex gap-1 items-center">
-              <Image height={32} src={iconInfo} alt="icon-info" />
+
+            {/* Notification */}
+            <li className="flex gap-2 items-center ">
+              <div className="relative">
+                <Image height={32} src={iconInfo} alt="icon-info" />
+                <div className="absolute top-0 left-6 bg-[#EA6C00] w-4 h-4 text-white text-[10px] rounded-full flex items-center justify-center">
+                  1
+                </div>
+              </div>
               <span>お知らせ</span>
             </li>
+
+            {/* Drawn Menu */}
             <li>
               {drawnMenuOpen && (
                 <div className="relative">
