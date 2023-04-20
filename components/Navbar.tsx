@@ -4,9 +4,14 @@ import iconMemo from "@/public/assets/icon_memo.svg";
 import iconChallenge from "@/public/assets/icon_challenge.svg";
 import iconInfo from "@/public/assets/icon_info.svg";
 import iconMenu from "@/public/assets/icon_menu.svg";
+import iconClose from "@/public/assets/icon_close.svg";
 import Link from "next/link";
+import DrawnMenu from "./DrawnMenu";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [drawnMenuOpen, setDrawnMenuOpen] = useState(false);
+
   return (
     <section className="bg-[#414141] w-full">
       <div className="max-w-screen-lg mx-auto px-8 text-base text-white font-light">
@@ -32,7 +37,18 @@ const Navbar = () => {
               <span>お知らせ</span>
             </li>
             <li>
-              <Image height={32} src={iconMenu} alt="icon-menu" />
+              {drawnMenuOpen && (
+                <div className="relative">
+                  <DrawnMenu />
+                </div>
+              )}
+              <Image
+                className="hover:cursor-pointer"
+                height={32}
+                src={drawnMenuOpen ? iconClose : iconMenu}
+                alt="icon-menu"
+                onClick={() => setDrawnMenuOpen(!drawnMenuOpen)}
+              />
             </li>
           </ul>
         </nav>
