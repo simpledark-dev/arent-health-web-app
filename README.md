@@ -5,6 +5,7 @@
 - Implement Filter functions (clicking on Morning, Lunch, Dinner, Snack will filter the meals)
 - Implement mock API to simulate real API requests
 - Display loading spinner while fetching data from API
+- Write a few test cases to demonstrate the testing aspect
 
 ## Demo
 
@@ -86,12 +87,13 @@ src
 │   │   ├── ComponentB.tsx
 |   |   └── ComponentC.tsx
 │   ├── PageAComponent
-│       ├── ComponentA.tsx
-│       ├── ComponentB.tsx
-|       └── ComponentC.tsx
+│   |   ├── ComponentA.tsx
+│   |   ├── ComponentB.tsx
+|   |   └── ComponentC.tsx
+|   └── shared           ---> Components shared across all pages
 │   ...
 ├──pages
-│   ├── pageA            ---> a page of the application
+│   ├── pageA            ---> a page of the application (correspond to a route)
 |   |   └── index.tsx
 │   ├── pageB
 |       └── index.tsx
