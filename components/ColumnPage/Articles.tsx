@@ -1,7 +1,7 @@
 import Image from "next/image";
-import SeeMoreButton from "../SeeMoreButton";
+import SeeMoreButton from "@/components/shared/SeeMoreButton";
 import usefetchArticles from "@/hooks/usefetchArticles";
-import LoadingSpinner from "../LoadingSpinner";
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
 
 interface ArticleCardProps {
   date: string;

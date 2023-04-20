@@ -1,6 +1,6 @@
 import useFetchDiary from "@/hooks/useFetchDiary";
-import LoadingSpinner from "../LoadingSpinner";
-import SeeMoreButton from "../SeeMoreButton";
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import SeeMoreButton from "@/components/shared/SeeMoreButton";
 
 interface DiaryCardProps {
   date: string;

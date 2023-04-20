@@ -4,9 +4,10 @@ import { Icons } from "@/public/icons";
 
 import useFetchMealHistory from "@/hooks/useFetchMealHistory";
 
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import SeeMoreButton from "@/components/shared/SeeMoreButton";
+
 import { formateDateMonth } from "@/utils/dateTime";
-import SeeMoreButton from "../SeeMoreButton";
-import LoadingSpinner from "../LoadingSpinner";
 
 const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   return (

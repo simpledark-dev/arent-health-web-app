@@ -53,7 +53,7 @@ const Navbar = () => {
             <li>
               {drawnMenuOpen && (
                 <div className="relative">
-                  <DrawnMenu />
+                  <DrawnMenu setDrawnMenuOpen={setDrawnMenuOpen} />
                 </div>
               )}
               <Image
