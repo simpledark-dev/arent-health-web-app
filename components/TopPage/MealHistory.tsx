@@ -1,9 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import morningHex from "@/public/assets/morning_component_hex.svg";
-import lunchHex from "@/public/assets/lunch_component_hex.svg";
-import dinnerHex from "@/public/assets/dinner_component_hex.svg";
-import snackHex from "@/public/assets/snack_component_hex.svg";
+import { Icons } from "@/public/icons";
 
 import useFetchMealHistory from "@/hooks/useFetchMealHistory";
 
@@ -16,25 +13,25 @@ const FilterButtons = ({ setFilter }: { setFilter: any }) => {
     <div className="flex justify-center gap-16">
       <Image
         className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
-        src={morningHex}
+        src={Icons.morningHex}
         alt="morning-hex"
         onClick={() => setFilter("Morning")}
       />
       <Image
         className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
-        src={lunchHex}
+        src={Icons.lunchHex}
         alt="lunch-hex"
         onClick={() => setFilter("Lunch")}
       />
       <Image
         className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
-        src={dinnerHex}
+        src={Icons.dinnerHex}
         alt="dinner-hex"
         onClick={() => setFilter("Dinner")}
       />
       <Image
         className="hover:translate-x-1 hover:-translate-y-1 hover:cursor-pointer"
-        src={snackHex}
+        src={Icons.snackHex}
         alt="snack-hex"
         onClick={() => setFilter("Snack")}
       />

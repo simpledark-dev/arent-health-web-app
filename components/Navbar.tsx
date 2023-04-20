@@ -1,13 +1,8 @@
-import Image from "next/image";
-import healthLogo from "@/public/assets/health_logo.svg";
-import iconMemo from "@/public/assets/icon_memo.svg";
-import iconChallenge from "@/public/assets/icon_challenge.svg";
-import iconInfo from "@/public/assets/icon_info.svg";
-import iconMenu from "@/public/assets/icon_menu.svg";
-import iconClose from "@/public/assets/icon_close.svg";
-import Link from "next/link";
-import DrawnMenu from "./DrawnMenu";
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Icons } from "@/public/icons";
+import DrawnMenu from "./DrawnMenu";
 
 const Navbar = () => {
   const [drawnMenuOpen, setDrawnMenuOpen] = useState(false);
@@ -19,7 +14,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="mt-2">
             <Link href="/top-page">
-              <Image height={40} src={healthLogo} alt="logo" />
+              <Image height={40} src={Icons.healthLogo} alt="logo" />
             </Link>
           </div>
 
@@ -28,21 +23,25 @@ const Navbar = () => {
             {/* My Record */}
             <Link href="/record-page">
               <li className="flex gap-2 items-center">
-                <Image height={32} src={iconMemo} alt="icon-memo" />
+                <Image height={32} src={Icons.iconMemo} alt="icon-memo" />
                 <span>自分の記録</span>
               </li>
             </Link>
 
             {/* Challenge */}
             <li className="flex gap-2 items-center">
-              <Image height={32} src={iconChallenge} alt="icon-challenge" />
+              <Image
+                height={32}
+                src={Icons.iconChallenge}
+                alt="icon-challenge"
+              />
               <span>チャレンジ</span>
             </li>
 
             {/* Notification */}
             <li className="flex gap-2 items-center ">
               <div className="relative">
-                <Image height={32} src={iconInfo} alt="icon-info" />
+                <Image height={32} src={Icons.iconInfo} alt="icon-info" />
                 <div className="absolute top-0 left-6 bg-[#EA6C00] w-4 h-4 text-white text-[10px] rounded-full flex items-center justify-center">
                   1
                 </div>
@@ -60,7 +59,7 @@ const Navbar = () => {
               <Image
                 className="hover:cursor-pointer"
                 height={32}
-                src={drawnMenuOpen ? iconClose : iconMenu}
+                src={drawnMenuOpen ? Icons.iconClose : Icons.iconMenu}
                 alt="icon-menu"
                 onClick={() => setDrawnMenuOpen(!drawnMenuOpen)}
               />
