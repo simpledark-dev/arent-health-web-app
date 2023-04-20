@@ -73,7 +73,7 @@ Figma design: [Design](https://www.figma.com/file/7qqT3dvv5OagaRlUFK01vB/HealthA
 ```
 figures              ---> images/screenshots for Readme.md
 api
-├── mockData         ---> mock data
+├── mockData         ---> mock data (meals, diary, graph data,...)
 └── MockAPI.ts       ---> mock API fetch mock data
 public               ---> contains images, icons, etc.
 ├── icons
