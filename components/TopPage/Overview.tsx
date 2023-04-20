@@ -1,8 +1,7 @@
-import d01 from "@/public/images/d01.jpg";
+import { MealImages } from "@/public/images";
 import Image from "next/image";
 
 //background: linear-gradient(225deg, #FFCC21 0%, #FF963C 100%);
-
 const CircularProgress = ({ progress }: { progress: number }) => {
   return (
     <div
@@ -26,7 +25,7 @@ const Overview = () => {
           <div className="relative h-full bg-gradient-to-br from-yellow-300/10 to-yellow-500/30 saturate-150 brightness-100">
             <Image
               className=" z-10 h-full object-cover mix-blend-soft-light"
-              src={d01}
+              src={MealImages.mealImg1}
               alt="Achievement rate bg"
             />
             <CircularProgress progress={75} />

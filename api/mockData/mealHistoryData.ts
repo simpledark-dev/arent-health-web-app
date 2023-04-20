@@ -1,11 +1,4 @@
-import mealImg1 from "@/public/images/m01.jpg";
-import mealImg2 from "@/public/images/m02.jpg";
-import mealImg3 from "@/public/images/m03.jpg";
-import mealImg4 from "@/public/images/d01.jpg";
-import mealImg5 from "@/public/images/d02.jpg";
-import mealImg6 from "@/public/images/l01.jpg";
-import mealImg7 from "@/public/images/l02.jpg";
-import mealImg8 from "@/public/images/l03.jpg";
+import { MealImages } from "@/public/images";
 
 export enum MealType {
   MORNING = "Morning",
@@ -22,7 +15,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg1,
+    image: MealImages.mealImg1,
   },
   {
     id: 1,
@@ -31,7 +24,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.LUNCH,
-    image: mealImg2,
+    image: MealImages.mealImg2,
   },
   {
     id: 2,
@@ -40,7 +33,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg3,
+    image: MealImages.mealImg3,
   },
   {
     id: 3,
@@ -49,7 +42,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.DINNER,
-    image: mealImg4,
+    image: MealImages.mealImg4,
   },
   {
     id: 4,
@@ -58,7 +51,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.DINNER,
-    image: mealImg5,
+    image: MealImages.mealImg5,
   },
   {
     id: 5,
@@ -67,7 +60,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.LUNCH,
-    image: mealImg6,
+    image: MealImages.mealImg6,
   },
   {
     id: 6,
@@ -76,7 +69,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg7,
+    image: MealImages.mealImg7,
   },
   {
     id: 7,
@@ -85,7 +78,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg8,
+    image: MealImages.mealImg8,
   },
   {
     id: 8,
@@ -94,7 +87,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg7,
+    image: MealImages.mealImg7,
   },
   {
     id: 9,
@@ -103,7 +96,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg4,
+    image: MealImages.mealImg4,
   },
   {
     id: 10,
@@ -112,7 +105,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg2,
+    image: MealImages.mealImg2,
   },
   {
     id: 11,
@@ -121,7 +114,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.MORNING,
-    image: mealImg1,
+    image: MealImages.mealImg1,
   },
   {
     id: 12,
@@ -130,7 +123,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.SNACK,
-    image: mealImg2,
+    image: MealImages.mealImg2,
   },
   {
     id: 13,
@@ -139,7 +132,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.SNACK,
-    image: mealImg1,
+    image: MealImages.mealImg1,
   },
   {
     id: 14,
@@ -148,7 +141,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.DINNER,
-    image: mealImg2,
+    image: MealImages.mealImg2,
   },
   {
     id: 15,
@@ -157,7 +150,7 @@ export const mealList = [
       month: 5,
     },
     type: MealType.DINNER,
-    image: mealImg1,
+    image: MealImages.mealImg1,
   },
   {
     id: 15,
@@ -166,6 +159,6 @@ export const mealList = [
       month: 5,
     },
     type: MealType.SNACK,
-    image: mealImg6,
+    image: MealImages.mealImg6,
   },
 ];

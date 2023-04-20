@@ -1,7 +1,5 @@
 import Image from "next/image";
-import MyRecommend1 from "@/public/images/MyRecommend-1.jpg";
-import MyRecommend2 from "@/public/images/MyRecommend-2.jpg";
-import MyRecommend3 from "@/public/images/MyRecommend-3.jpg";
+import { RecommendedImages } from "@/public/images";
 
 const EntryCard = ({
   header,
@@ -45,7 +43,7 @@ const Entries = () => {
       <EntryCard
         header="BODY RECORD"
         buttonText="自分のカラダの記録"
-        image={MyRecommend1}
+        image={RecommendedImages.MyRecommend1}
         imageObjectPosition="object-left"
       />
 
@@ -53,7 +51,7 @@ const Entries = () => {
       <EntryCard
         header="MY EXERCISE"
         buttonText="自分の運動の記録"
-        image={MyRecommend2}
+        image={RecommendedImages.MyRecommend2}
         imageObjectPosition="object-left"
       />
 
@@ -61,7 +59,7 @@ const Entries = () => {
       <EntryCard
         header="MY DIARY"
         buttonText="自分の日記"
-        image={MyRecommend3}
+        image={RecommendedImages.MyRecommend3}
         imageObjectPosition="object-center"
       />
     </div>
