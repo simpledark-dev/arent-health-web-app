@@ -1,5 +1,8 @@
+// Hooks
 import usefetchExercises from "@/hooks/usefetchExercises";
-import LoadingSpinner from "../shared/LoadingSpinner";
+
+// Components
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
 
 interface ExerciseEntryProps {
   title: string;

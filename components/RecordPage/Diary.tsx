@@ -1,4 +1,7 @@
+// Hooks
 import useFetchDiary from "@/hooks/useFetchDiary";
+
+// Components
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
 import SeeMoreButton from "@/components/shared/SeeMoreButton";
 

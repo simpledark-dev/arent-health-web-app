@@ -1,9 +1,13 @@
 import { MealImages } from "@/public/images";
 import Image from "next/image";
-import LineChart from "@/components/shared/LineChart";
+
+// Hooks
 import useFetchGraphData from "@/hooks/useFetchGraphData";
-import LoadingSpinner from "../shared/LoadingSpinner";
 import useFetchAchievementRate from "@/hooks/useFetchAchievementRate";
+
+// Components
+import LineChart from "@/components/shared/LineChart";
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
 
 const CircularProgress = ({
   loading,

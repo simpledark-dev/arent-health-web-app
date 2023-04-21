@@ -1,6 +1,9 @@
-import LineChart from "../shared/LineChart";
-import LoadingSpinner from "../shared/LoadingSpinner";
+// Hooks
 import useFetchGraphData from "@/hooks/useFetchGraphData";
+
+// Components
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import LineChart from "@/components/shared/LineChart";
 
 const BodyRecordGraph = () => {
   const { loading, graphData } = useFetchGraphData();

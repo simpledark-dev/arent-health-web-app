@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
+// Icons
 import { Icons } from "@/public/icons";
-import DrawnMenu from "./DrawnMenu";
+
+// Components / Layout
+import DrawnMenu from "@/components/shared/DrawnMenu";
 import Container from "@/layouts/Container";
+
+// Config
 import { PATHS } from "@/config/paths";
 
 const Navbar = () => {

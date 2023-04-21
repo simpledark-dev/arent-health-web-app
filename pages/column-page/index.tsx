@@ -1,6 +1,6 @@
+import Container from "@/layouts/Container";
 import Articles from "@/components/ColumnPage/Articles";
 import RecommendSelections from "@/components/ColumnPage/RecommendSelections";
-import Container from "@/layouts/Container";
 
 const ColumnPage = () => {
   return (

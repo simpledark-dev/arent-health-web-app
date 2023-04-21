@@ -1,14 +1,19 @@
 import { useState } from "react";
 import Image from "next/image";
+
+// Icons
 import { Icons } from "@/public/icons";
 
+// Hooks
 import useFetchMealHistory from "@/hooks/useFetchMealHistory";
 
+// Components / Layout
+import Container from "@/layouts/Container";
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
 import SeeMoreButton from "@/components/shared/SeeMoreButton";
 
+// Utils
 import { formateDateMonth } from "@/utils/dateTime";
-import Container from "@/layouts/Container";
 
 const FilterButtons = ({ setFilter }: { setFilter: any }) => {
   return (

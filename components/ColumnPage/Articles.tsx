@@ -1,6 +1,10 @@
 import Image from "next/image";
-import SeeMoreButton from "@/components/shared/SeeMoreButton";
+
+// Hooks
 import usefetchArticles from "@/hooks/usefetchArticles";
+
+// Components
+import SeeMoreButton from "@/components/shared/SeeMoreButton";
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
 
 interface ArticleCardProps {

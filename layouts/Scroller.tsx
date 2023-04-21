@@ -1,6 +1,5 @@
 import { Icons } from "@/public/icons";
 import Image from "next/image";
-import React from "react";
 
 const Scroller = () => {
   const onScroll = () => {
