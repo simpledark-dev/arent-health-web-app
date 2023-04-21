@@ -1,9 +1,9 @@
 import { ClipLoader } from "react-spinners";
 
-const LoadingSpinner = () => {
+const LoadingSpinner = ({ color = "black" }) => {
   return (
-    <div className="w-max mx-auto py-32">
-      <ClipLoader size={60} />
+    <div className="w-max mx-auto py-[10%]">
+      <ClipLoader color={color} size={60} />
     </div>
   );
 };

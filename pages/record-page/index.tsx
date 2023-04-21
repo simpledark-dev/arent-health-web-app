@@ -1,14 +1,14 @@
 import Diary from "@/components/RecordPage/Diary";
 import Entries from "@/components/RecordPage/Entries";
 import ExerciseRecord from "@/components/RecordPage/ExerciseRecord";
-import Graph from "@/components/RecordPage/Graph";
+import BodyRecordGraph from "@/components/RecordPage/BodyRecordGraph";
 import Container from "@/layouts/Container";
 
 const RecordPage = () => {
   return (
     <Container>
       <Entries />
-      <Graph />
+      <BodyRecordGraph />
       <ExerciseRecord />
       <Diary />
     </Container>

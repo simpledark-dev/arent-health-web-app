@@ -1,5 +1,11 @@
 // Mock Data
-import { mealList, diaryList, articleList, exerciseList } from "./mockData";
+import {
+  mealList,
+  diaryList,
+  articleList,
+  exerciseList,
+  graphData,
+} from "./mockData";
 
 import { Meal, Diary, Article, Exercise } from "@/types";
 
@@ -26,7 +32,7 @@ const fetchExercises = (): Promise<Exercise[] | null> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(exerciseList);
-    }, FAKE_DELAY_IN_MS);
+    }, FAKE_SLOW_DELAY_IN_MS);
   });
 };
 
@@ -38,11 +44,20 @@ const fetchArticles = (): Promise<Article[] | null> => {
   });
 };
 
+const fetchGraphData = (): Promise<any> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(graphData);
+    }, FAKE_DELAY_IN_MS);
+  });
+};
+
 const MockAPI = {
   fetchMealHistory,
   fetchDiary,
   fetchExercises,
   fetchArticles,
+  fetchGraphData,
 };
 
 export default MockAPI;
