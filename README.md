@@ -28,7 +28,7 @@ To solve this problem, I used React and Next.js to create the application's fron
 
 ### Demo
 
-To verify that the application is working as intended, please visit these links:
+To verify that the application is working as intended, please visit these links (or you can run locally - see below):
 
 - [Top page](https://arent-health-web-app.vercel.app/)
 - [My Record Page](https://arent-health-web-app.vercel.app/record-page)
@@ -205,18 +205,18 @@ Normally we would have a change log file (e.g CHANGELOG.MD) to document all the 
 
 Clone this repository.
 
-Installation:
+At the root directory:
 
-`yarn install` (or npm install)
+Install packages: `yarn install` (or npm install)
 
 Then, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 # or
-pnpm dev
+npm run dev
+# or
+npm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
