@@ -32,10 +32,11 @@ const Navbar = () => {
           <ul className="flex gap-12">
             {/* My Record */}
             <Link href={PATHS.record}>
-              <li className="hidden md:flex gap-2 items-center">
+              <li className="flex gap-2 items-center">
                 <Image height={32} src={Icons.iconMemo} alt="icon-memo" />
                 <span
-                  className={`${
+                  className={`hidden sm:block
+                  ${
                     router.pathname === PATHS.record ? "text-primary-400" : ""
                   }`}
                 >
