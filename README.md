@@ -28,6 +28,8 @@ To solve this problem, I used React and Next.js to create the application's fron
 
 ### Demo
 
+Github Repo: [Repo link](https://github.com/simpledark-dev/arent-health-web-app)
+
 To verify that the application is working as intended, please visit these links (or you can run locally - see below):
 
 - [Top page](https://arent-health-web-app.vercel.app/)
