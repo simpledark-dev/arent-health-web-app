@@ -1,29 +1,30 @@
 import Link from "next/link";
+import { PATHS } from "@/config/paths";
 
 const menus = [
   {
     name: "自分の記録",
-    link: "/record-page",
+    link: PATHS.record,
   },
   {
     name: "体重グラフ",
-    link: "/",
+    link: PATHS.top,
   },
   {
     name: "目標",
-    link: "/",
+    link: PATHS.top,
   },
   {
     name: "選択中のコース",
-    link: "/",
+    link: PATHS.top,
   },
   {
     name: "コラム一覧",
-    link: "/column-page",
+    link: PATHS.column,
   },
   {
     name: "設定",
-    link: "/",
+    link: PATHS.top,
   },
 ];
 
