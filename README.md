@@ -145,7 +145,7 @@ pages
    ...
 utils
 ├── moduleA          ---> util module for important calculation
-└──tests             ---> unit tests for each module
+└── tests             ---> unit tests for each module
     ├── fn1.test.ts
     ├── fn2.test.ts
     ...
