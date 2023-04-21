@@ -1,7 +1,9 @@
 import { MealImages } from "@/public/images";
 import Image from "next/image";
+import LineChart from "@/components/shared/LineChart";
+import useFetchGraphData from "@/hooks/useFetchGraphData";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
-//background: linear-gradient(225deg, #FFCC21 0%, #FF963C 100%);
 const CircularProgress = ({ progress }: { progress: number }) => {
   return (
     <div
@@ -18,6 +20,8 @@ const CircularProgress = ({ progress }: { progress: number }) => {
 };
 
 const Overview = () => {
+  const { loading, graphData } = useFetchGraphData();
+
   return (
     <section>
       <div className="flex flex-wrap">
@@ -31,7 +35,19 @@ const Overview = () => {
             <CircularProgress progress={75} />
           </div>
         </div>
-        <div className="bg-[#2E2E2E] w-full h-80 sm:w-[58%]"></div>
+        <div className="bg-[#2E2E2E] w-full h-80 sm:w-[58%] px-8 flex justify-center items-center">
+          {loading ? (
+            <LoadingSpinner color="white" />
+          ) : (
+            <LineChart
+              data={graphData.lines}
+              width={700}
+              height={285}
+              hatchMarkLabels={graphData.labels}
+              colors={["#FFCC21", "#8FE9D0"]}
+            />
+          )}
+        </div>
       </div>
     </section>
   );

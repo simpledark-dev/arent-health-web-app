@@ -58,7 +58,7 @@ const ExerciseRecord = () => {
           }
         >
           {loading ? (
-            <LoadingSpinner />
+            <LoadingSpinner color="white" />
           ) : (
             exerciseList?.map((exercise) => {
               return (
