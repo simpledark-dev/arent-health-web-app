@@ -5,7 +5,7 @@ interface RecommendationCard {
   };
 }
 
-const RecommendationCard = ({ texts }: RecommendationCard) => {
+export const RecommendationCard = ({ texts }: RecommendationCard) => {
   return (
     <div className="w-[275px] sm:w-[calc(50%-2rem)] md:w-[calc(25%-2rem)] h-36 bg-[#2E2E2E] flex flex-col justify-center items-center">
       <div className="text-center space-y-2">

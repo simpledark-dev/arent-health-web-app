@@ -25,6 +25,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
     "tailwind-scrollbar": "^3.0.0"
   }
 }
