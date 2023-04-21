@@ -1,4 +1,4 @@
-// I did not have time to write all the test cases
+// I did not have time to write all the test cases for all components
 // But here's an example:
 
 import { render } from "@testing-library/react";
