@@ -12,9 +12,9 @@ const Scroller = () => {
   };
 
   return (
-    <button onClick={onScroll}>
+    <button className="hidden xl:inline-block" onClick={onScroll}>
       <Image
-        className="fixed top-3/4 right-36"
+        className="fixed top-3/4 xl:right-36"
         src={Icons.scroll}
         alt="scroll"
       />
