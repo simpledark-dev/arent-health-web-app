@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "@/public/icons";
 import DrawnMenu from "./DrawnMenu";
 import Container from "@/layouts/Container";
+import { PATHS } from "@/config/paths";
 
 const Navbar = () => {
+  const router = useRouter();
   const [drawnMenuOpen, setDrawnMenuOpen] = useState(false);
 
   return (
@@ -14,7 +17,7 @@ const Navbar = () => {
         <nav className="flex justify-between h-16 items-center text-base text-white font-light">
           {/* Logo */}
           <div className="mt-2">
-            <Link href="/">
+            <Link href={PATHS.top}>
               <Image height={40} src={Icons.healthLogo} alt="logo" />
             </Link>
           </div>
@@ -22,10 +25,16 @@ const Navbar = () => {
           {/* Menu Items */}
           <ul className="flex gap-12">
             {/* My Record */}
-            <Link href="/record-page">
+            <Link href={PATHS.record}>
               <li className="hidden md:flex gap-2 items-center">
                 <Image height={32} src={Icons.iconMemo} alt="icon-memo" />
-                <span>自分の記録</span>
+                <span
+                  className={`${
+                    router.pathname === PATHS.record ? "text-[#FF963C]" : ""
+                  }`}
+                >
+                  自分の記録
+                </span>
               </li>
             </Link>
 

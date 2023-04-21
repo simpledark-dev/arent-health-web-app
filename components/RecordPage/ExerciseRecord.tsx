@@ -63,7 +63,7 @@ const ExerciseRecord = () => {
             exerciseList?.map((exercise) => {
               return (
                 <ExerciseEntry
-                  key={0}
+                  key={exercise.id}
                   title={exercise.title}
                   energyAmount={exercise.energy.amount}
                   energyUnit={exercise.energy.unit}

@@ -4,6 +4,7 @@ import iconChallenge from "@/public/icons/icon_challenge.svg";
 import iconInfo from "@/public/icons/icon_info.svg";
 import iconMenu from "@/public/icons/icon_menu.svg";
 import iconClose from "@/public/icons/icon_close.svg";
+import scroll from "@/public/icons/component_scroll.svg";
 
 import morningHex from "@/public/icons/morning_component_hex.svg";
 import lunchHex from "@/public/icons/lunch_component_hex.svg";
@@ -21,4 +22,5 @@ export const Icons = {
   lunchHex,
   dinnerHex,
   snackHex,
+  scroll,
 };
