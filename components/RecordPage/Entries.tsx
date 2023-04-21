@@ -20,13 +20,13 @@ const EntryCard = ({
           src={image}
           alt="entry"
         />
-        <div className="absolute top-0 h-full aspect-square bg-[#2E2E2E] opacity-80" />
+        <div className="absolute top-0 h-full aspect-square bg-dark-600 opacity-80" />
         <div className="absolute top-[50%] -translate-y-1/2 left-0 right-0 mx-auto">
           <div className="flex flex-col items-center space-y-2">
-            <h4 className="text-[#FFCC21] text-lg sm:text-2xl font-light tracking-wider">
+            <h4 className="text-primary-300 text-lg sm:text-2xl font-light tracking-wider">
               {header}
             </h4>
-            <button className="bg-[#FF963C] text-white font-light text-xs sm:text-sm h-6 px-4">
+            <button className="bg-primary-400 text-light-100 font-light text-xs sm:text-sm h-6 px-4">
               {buttonText}
             </button>
           </div>

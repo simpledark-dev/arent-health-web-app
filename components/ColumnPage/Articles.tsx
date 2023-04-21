@@ -24,9 +24,9 @@ const ArticleCard = ({
       <div className="relative h-72 sm:h-36">
         <Image className="h-full object-cover" src={image} alt="article-img" />
         <div
-          className="absolute bottom-0 left-0 w-[60%] h-6 px-2 bg-[#FFCC21] 
+          className="absolute bottom-0 left-0 w-[60%] h-6 px-2 bg-primary-300 
             flex justify-between items-center
-            text-white font-light text-[0.9rem]"
+            text-light-100 font-light text-[0.9rem]"
         >
           <span>{date}</span> <span>{time}</span>
         </div>
@@ -35,7 +35,7 @@ const ArticleCard = ({
       {/* Texts */}
       <div className="font-light space-y-2 my-2">
         <p className="text-sm">{title}</p>
-        <p className="text-xs text-[#FF963C] space-x-2">
+        <p className="text-xs text-primary-400 space-x-2">
           {hashtags.map((hashtag) => (
             <span key={hashtag}>{hashtag}</span>
           ))}

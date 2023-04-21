@@ -40,8 +40,8 @@ const Menu = ({
   return (
     <Link href={link} onClick={() => setDrawnMenuOpen(false)}>
       <div
-        className="w-72 h-16 py-5 px-8 bg-[#777777] border-b-[0.05px] border-[#2E2E2E50]
-        text-lg text-white font-light"
+        className="w-72 h-16 py-5 px-8 bg-gray-400 border-b-[0.05px] border-[#2E2E2E50]
+        text-lg text-light-100 font-light"
       >
         {name}
       </div>

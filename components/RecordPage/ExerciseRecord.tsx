@@ -21,16 +21,16 @@ const ExerciseEntry = ({
       <div className="flex justify-between">
         <div>
           <p>{title}</p>
-          <p className="text-[#FFCC21]">
+          <p className="text-primary-300">
             {energyAmount}
             {energyUnit}
           </p>
         </div>
-        <span className="text-[#FFCC21] text-lg">
+        <span className="text-primary-300 text-lg">
           {durationAmount} {durationUnit}
         </span>
       </div>
-      <hr className="border-[#777777]" />
+      <hr className="border-gray-400" />
     </li>
   );
 };
@@ -38,16 +38,16 @@ const ExerciseEntry = ({
 const ExerciseRecord = () => {
   const { exerciseList, loading } = usefetchExercises();
   return (
-    <div className="w-full bg-[#414141] py-4 pr-8 mt-16 font-light text-white">
+    <div className="w-full bg-dark-500 py-4 pr-8 mt-16 font-light text-light-100">
       <div className="flex w-48 justify-between mb-2 mx-8">
         <h3 className="w-[2ch]">MY EXERCISE</h3>
         <h3 className="text-xl">2021.05.21</h3>
       </div>
       <div
-        className={`mx-auto h-56 bg-[#414141] px-8
+        className={`mx-auto h-56 bg-dark-500 px-8
         ${
           !loading ? "overflow-x-hidden overflow-scroll" : ""
-        } scrollbar scrollbar-thumb-[#FFCC21] scrollbar-track-[#777777]`}
+        } scrollbar scrollbar-thumb-primary-300 scrollbar-track-gray-400`}
       >
         <ul
           style={{ columnGap: "4rem" }} // missing tailwind class

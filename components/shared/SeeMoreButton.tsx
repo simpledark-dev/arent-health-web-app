@@ -7,7 +7,7 @@ const SeeMoreButton = ({ text }: { text: string }) => {
           background:
             "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",
         }}
-        className="h-14 w-72 bg-black text-white font-light rounded mx-auto"
+        className="h-14 w-72 bg-black text-light-100 font-light rounded mx-auto"
       >
         {text}
       </button>

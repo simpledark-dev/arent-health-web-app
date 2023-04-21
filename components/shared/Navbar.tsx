@@ -12,9 +12,9 @@ const Navbar = () => {
   const [drawnMenuOpen, setDrawnMenuOpen] = useState(false);
 
   return (
-    <section className="bg-[#414141]">
+    <section className="bg-dark-500">
       <Container>
-        <nav className="flex justify-between h-16 items-center text-base text-white font-light">
+        <nav className="flex justify-between h-16 items-center text-base text-light-100 font-light">
           {/* Logo */}
           <div className="mt-2">
             <Link href={PATHS.top}>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Image height={32} src={Icons.iconMemo} alt="icon-memo" />
                 <span
                   className={`${
-                    router.pathname === PATHS.record ? "text-[#FF963C]" : ""
+                    router.pathname === PATHS.record ? "text-primary-400" : ""
                   }`}
                 >
                   自分の記録
@@ -52,7 +52,7 @@ const Navbar = () => {
             <li className="flex gap-2 items-center ">
               <div className="relative">
                 <Image height={32} src={Icons.iconInfo} alt="icon-info" />
-                <div className="absolute top-0 left-6 bg-[#EA6C00] w-4 h-4 text-white text-[10px] rounded-full flex items-center justify-center">
+                <div className="absolute top-0 left-6 bg-primary-500 w-4 h-4 text-light-100 text-[10px] rounded-full flex items-center justify-center">
                   1
                 </div>
               </div>

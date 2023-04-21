@@ -9,7 +9,7 @@ const CircularProgress = ({ progress }: { progress: number }) => {
   const { loading, achievementRate } = useFetchAchievementRate();
   return (
     <div
-      className="absolute top-[50%] -translate-y-1/2 left-0 right-0 mx-auto radial-progress text-white flex items-center gap-1"
+      className="absolute top-[50%] -translate-y-1/2 left-0 right-0 mx-auto radial-progress text-light-100 flex items-center gap-1"
       // @ts-ignore
       style={{ "--size": "11rem", "--value": progress, "--thickness": "3px" }}
     >
@@ -42,7 +42,7 @@ const Overview = () => {
             <CircularProgress progress={75} />
           </div>
         </div>
-        <div className="bg-[#2E2E2E] w-full h-80 sm:w-[58%] px-8 flex justify-center items-center">
+        <div className="bg-dark-600 w-full h-80 sm:w-[58%] px-8 flex justify-center items-center">
           {loading ? (
             <LoadingSpinner color="white" />
           ) : (

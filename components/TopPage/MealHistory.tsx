@@ -57,8 +57,8 @@ const MealCard = ({ image, date, month, type }: MealCardProps) => {
         alt="meal"
       />
       <div
-        className="absolute bottom-0 left-0 w-1/2 h-8 bg-[#FFCC21] flex justify-center items-center
-  text-white font-light text-[0.9rem]"
+        className="absolute bottom-0 left-0 w-1/2 h-8 bg-primary-300 flex justify-center items-center
+  text-light-100 font-light text-[0.9rem]"
       >
         {formateDateMonth(date, month)}.{type}
       </div>
