@@ -1,21 +1,34 @@
 # Health Application
 
-\*\*\* **Bonus features**:
+## Quick Overview
 
-- Implement Filter functions (clicking on Morning, Lunch, Dinner, Snack will filter the meals)
-- Implement mock APIs to simulate real API requests to retrieve data:
+### Problem
+
+The problem was to create a health application that looks and behaves like a real-world application. The application needed to have several pages, including charts, a meal tracker, and an exercise log.
+
+### Solution
+
+To solve this problem, I used React and Next.js to create the application's frontend. I used Tailwind CSS to style the application. To simulate real API requests, I created mock API requests to fetch mock data and display them on the pages.
+
+### \*\*\* **Bonus features** \*\*\* :
+
+- On Top page, implement **filter** functions that allow users to filter meals by clicking on categories: Morning, Lunch, Dinner, and Snack.
+- Implement **mock APIs** that simulate real API requests and return mock data for the following APIs:
+
   - Achievement rate API
   - Body record graph API
   - Meal history API
   - My exercise API
   - My diary API
-- Display loading spinner while fetching data from API for each widget.
-- Make all 3 pages responsive on all screen sizes
-- Write a few test cases to demonstrate the testing aspect
+  - Article API
 
-## Demo
+- Display a **loading spinner** while fetching data from each API for every widget.
+- Make all three pages **responsive** on all screen sizes.
+- Write a few **test cases** to demonstrate the testing aspect.
 
-Link:
+### Demo
+
+To verify that the application is working as intended, please visit these links:
 
 - [Top page](https://arent-health-web-app.vercel.app/)
 - [My Record Page](https://arent-health-web-app.vercel.app/record-page)
@@ -26,7 +39,6 @@ Link:
 - [Table of Contents](#table-of-contents)
 - [Design](#design)
 - [Project Screenshots](#project-screenshots)
-- [Bonus Features](#bonus-features)
 - [Technologies](#technologies)
 - [Project Structure](#project-structure)
 - [Code Formatting & Linting](#code-formatting--linting)
@@ -113,7 +125,7 @@ public               ---> contains images, icons, etc.
 ├── icons
 └── images
 hooks                ---> reusable custom hooks (e.g API fetch)
-layouts              ---> layout components defining structure of a page
+layouts              ---> layout components defining common structure of a page which then used in all pages
 components
 ├── PageAComponent   ---> Components used in a page
 |   ├── ComponentA.tsx
