@@ -3,9 +3,14 @@
 \*\*\* **Bonus features**:
 
 - Implement Filter functions (clicking on Morning, Lunch, Dinner, Snack will filter the meals)
-- Implement mock API to simulate real API requests
-- Display loading spinner while fetching data from API
-- Make 3 pages responsive on all screen sizes
+- Implement mock APIs to simulate real API requests to retrieve data:
+  - Achievement rate API
+  - Body record graph API
+  - Meal history API
+  - My exercise API
+  - My diary API
+- Display loading spinner while fetching data from API for each widget.
+- Make all 3 pages responsive on all screen sizes
 - Write a few test cases to demonstrate the testing aspect
 
 ## Demo
@@ -24,7 +29,6 @@ Link:
 - [Bonus Features](#bonus-features)
 - [Technologies](#technologies)
 - [Project Structure](#project-structure)
-- [Unit Testing](#unit-testing)
 - [Code Formatting & Linting](#code-formatting--linting)
 - [Git Workflow](#git-workflow)
 - [Coding Standards](#coding-standards)
@@ -37,13 +41,41 @@ Figma design: [Design](https://www.figma.com/file/7qqT3dvv5OagaRlUFK01vB/HealthA
 
 ## Project Screenshots
 
-- Top Page
+### Top Page
 
-- My Record Page
+- Desktop View
 
-- Column Page
+<img src="figures/top-page-desktop.png" width="640" height="auto" />
 
-<img src="figures/column-page.png" height="auto" />
+- Mobile View
+
+<img src="figures/top-page-mobile-1.png" width="200" height="auto" />
+
+<img src="figures/top-page-mobile-2.png" width="200" height="auto" />
+
+### My Record Page
+
+- Desktop View
+
+<img src="figures/record-page-desktop.png" width="640" height="auto" />
+
+- Mobile View
+
+<img src="figures/record-page-mobile-1.png" width="200" height="auto" />
+
+<img src="figures/record-page-mobile-2.png" width="200" height="auto" />
+
+### Column Page
+
+- Desktop View
+
+<img src="figures/column-page-desktop.png" width="640" height="auto" />
+
+- Mobile View
+
+<img src="figures/column-page-mobile-1.png" width="200" height="auto" />
+
+<img src="figures/column-page-mobile-2.png" width="200" height="auto" />
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -51,6 +83,7 @@ Figma design: [Design](https://www.figma.com/file/7qqT3dvv5OagaRlUFK01vB/HealthA
 
 ### Core
 
+- **React (18.2.0)**
 - **NextJS**
 - **TypeScript**
 
@@ -100,11 +133,11 @@ pages
    ...
 utils
 ├── moduleA          ---> util module for important calculation
-    └──tests         ---> unit tests for each module
-        ├── fn1.test.ts
-        ├── fn2.test.ts
-         ...
-        └── index.tsx
+└──tests             ---> unit tests for each module
+    ├── fn1.test.ts
+    ├── fn2.test.ts
+    ...
+tailwind.config.js   ---> define global style variables such as colors + plugins
 README.md
 ```
 
