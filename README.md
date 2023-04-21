@@ -163,13 +163,13 @@ README.md
 
 - Used Jest to test utility functions (such as getTripDuration, convertDateFormat)
 - The test files are located inside the utils folder:
-  - `utils / module / tests / (all test files)`
+  - `utils / __tests__ / (all test files)`
 
 ### Component Testing
 
 - Used React testing library to test each React component
 - The test files are located inside the component folder:
-  - `Component / .test.jsx`
+  - `components / __tests__ / [component].test.jsx`
 - (However, I did not write all the tests)
 
 [Back to Table of Contents](#table-of-contents)
