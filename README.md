@@ -5,6 +5,7 @@
 - Implement Filter functions (clicking on Morning, Lunch, Dinner, Snack will filter the meals)
 - Implement mock API to simulate real API requests
 - Display loading spinner while fetching data from API
+- Make 3 pages responsive on all screen sizes
 - Write a few test cases to demonstrate the testing aspect
 
 ## Demo

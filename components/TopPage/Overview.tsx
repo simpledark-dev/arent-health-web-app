@@ -3,18 +3,25 @@ import Image from "next/image";
 import LineChart from "@/components/shared/LineChart";
 import useFetchGraphData from "@/hooks/useFetchGraphData";
 import LoadingSpinner from "../shared/LoadingSpinner";
+import useFetchAchievementRate from "@/hooks/useFetchAchievementRate";
 
 const CircularProgress = ({ progress }: { progress: number }) => {
+  const { loading, achievementRate } = useFetchAchievementRate();
   return (
     <div
       className="absolute top-[50%] -translate-y-1/2 left-0 right-0 mx-auto radial-progress text-white flex items-center gap-1"
       // @ts-ignore
       style={{ "--size": "11rem", "--value": progress, "--thickness": "3px" }}
     >
-      <div className="space-x-1">
-        <span className="font-light">05/21</span>
-        <span className="text-2xl">{progress}%</span>
-      </div>
+      {loading ? (
+        <span className="tracking-widest">Loading...</span>
+      ) : (
+        <div className="space-x-1">
+          <span className="font-light">05/21</span>
+          <span className="text-2xl">{progress}%</span>
+          <div />
+        </div>
+      )}
     </div>
   );
 };

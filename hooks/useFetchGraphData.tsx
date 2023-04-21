@@ -6,7 +6,7 @@ const useFetchGraphData = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchArticlesAPI = async () => {
+    const fetchGraphDataAPI = async () => {
       try {
         const data = await MockAPI.fetchGraphData();
         setGraphData(data);
@@ -17,7 +17,7 @@ const useFetchGraphData = () => {
       }
     };
 
-    fetchArticlesAPI();
+    fetchGraphDataAPI();
   }, []);
 
   return { graphData, loading };

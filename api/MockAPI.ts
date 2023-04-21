@@ -1,5 +1,6 @@
 // Mock Data
 import {
+  achievementRate,
   mealList,
   diaryList,
   articleList,
@@ -7,16 +8,25 @@ import {
   graphData,
 } from "./mockData";
 
-import { Meal, Diary, Article, Exercise } from "@/types";
+import { AchievementRate, Meal, Diary, Article, Exercise } from "@/types";
 
 const FAKE_DELAY_IN_MS = 1000;
+const FAKE_NORMAL_DELAY_IN_MS = 2000;
 const FAKE_SLOW_DELAY_IN_MS = 3000;
+
+const fetchAchievementRate = (): Promise<AchievementRate | null> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(achievementRate);
+    }, FAKE_DELAY_IN_MS);
+  });
+};
 
 const fetchMealHistory = (): Promise<Meal[] | null> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(mealList);
-    }, FAKE_DELAY_IN_MS);
+    }, FAKE_NORMAL_DELAY_IN_MS);
   });
 };
 
@@ -53,6 +63,7 @@ const fetchGraphData = (): Promise<any> => {
 };
 
 const MockAPI = {
+  fetchAchievementRate,
   fetchMealHistory,
   fetchDiary,
   fetchExercises,

@@ -5,6 +5,11 @@ export enum MealType {
   SNACK = "Snack",
 }
 
+export interface AchievementRate {
+  date: string;
+  percentage: number;
+}
+
 export interface Meal {
   id: number;
   time: {
