@@ -22,13 +22,17 @@ export const RecommendationCard = ({ texts }: RecommendationCard) => {
 const RecommendSelections = () => {
   return (
     <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-16">
+      {/* COLUMN */}
       <RecommendationCard
         texts={{ en: "RECOMMENDED COLUMN", jp: "オススメ" }}
       />
+      {/* DIET */}
       <RecommendationCard
         texts={{ en: "RECOMMENDED DIET", jp: "ダイエット" }}
       />
+      {/* BEAUTY */}
       <RecommendationCard texts={{ en: "RECOMMENDED BEAUTY", jp: "美容" }} />
+      {/* HEALTH */}
       <RecommendationCard texts={{ en: "RECOMMENDED HEALTH", jp: "健康" }} />
     </div>
   );

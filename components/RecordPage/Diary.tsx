@@ -35,6 +35,7 @@ const Diary = () => {
           <LoadingSpinner />
         ) : (
           <>
+            {/* Diary List */}
             {diaryList?.map((diary) => {
               return (
                 <DiaryCard

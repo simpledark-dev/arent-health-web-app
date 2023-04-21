@@ -10,6 +10,7 @@ const BodyRecordGraph = () => {
 
   return (
     <div className="w-full h-[304px] py-4 mt-16 bg-dark-500 font-light">
+      {/* Graph Title */}
       <div className="text-light-100">
         <div className="flex w-48 justify-between mb-2 mx-8">
           <h3 className="w-[2ch]">BODY RECORD</h3>
@@ -20,6 +21,7 @@ const BodyRecordGraph = () => {
         <LoadingSpinner color="white" />
       ) : (
         <>
+          {/* Graph */}
           <div className="w-full bg-dark-500 flex justify-center items-center">
             <LineChart
               data={graphData.lines}
@@ -29,6 +31,7 @@ const BodyRecordGraph = () => {
               colors={["#FFCC21", "#8FE9D0"]}
             />
           </div>
+          {/* Graph buttons */}
           <div className="text-primary-300 space-x-4 mx-8">
             <button className="bg-white h-6 w-14 rounded-3xl">日</button>
             <button className="bg-white h-6 w-14 rounded-3xl">週</button>

@@ -14,13 +14,18 @@ const EntryCard = ({
 }) => {
   return (
     <div className="bg-amber-400 w-1/2 md:w-[calc(33.3%-1.5rem)] p-6">
+      {/* Relative container */}
       <div className="relative aspect-square">
+        {/* Image */}
         <Image
           className={`h-full object-cover ${imageObjectPosition} grayscale`}
           src={image}
           alt="entry"
         />
+        {/* Overlay div */}
         <div className="absolute top-0 h-full aspect-square bg-dark-600 opacity-80" />
+
+        {/* Inner text and button */}
         <div className="absolute top-[50%] -translate-y-1/2 left-0 right-0 mx-auto">
           <div className="flex flex-col items-center space-y-2">
             <h4 className="text-primary-300 text-lg sm:text-2xl font-light tracking-wider">
