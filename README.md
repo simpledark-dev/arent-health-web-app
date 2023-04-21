@@ -157,8 +157,6 @@ README.md
 
 [Back to Table of Contents](#table-of-contents)
 
-[Back to Table of Contents](#table-of-contents)
-
 ## Unit Testing
 
 ### Utility Testing
